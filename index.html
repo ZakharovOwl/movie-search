@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+  <link rel="stylesheet" href="./scr/style.css">
+  <link rel="stylesheet" href="./scr/swiper.min.css">
+  <title></title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Movie Search</a>
+    </nav>
+  </header>
+  <main class="container mt-2">
+    <form>
+      <fieldset class="form-group">
+        <label for="searchTerm">Search</label>
+        <input type="text" class="form-input form-control" id="searchTerm" placeholder="Something went wrong">
+      </fieldset>
+      <button type="submit" class="button btn btn-primary">Search</button>
+    </form>
+    <section class="row movies-area">
+      <section id="results" class="mt-2 col-9 row">
+      </section>
+      <section class="mt-2 col-3 row">
+        <h3>Watch Later</h3>
+        <section id="watch-later" class="row">
+          <!-- <small>You have no movies queued.</small> -->
+        </section>
+      </section>
+    </section>
+
+    <!-- Swiper -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slide1"><p>Requiem for a Dream</p></div>
+        <div class="swiper-slide slide2"><p>A Nightmare on Elm</p></div>
+        <div class="swiper-slide slide3"><p>Goal! The Dream Begins</p></div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
+        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">Slide 9</div>
+        <div class="swiper-slide">Slide 10</div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+
+  <footer>
+    <div class="wrapper-footer">
+        <a class="footer-text" href="#">RS School 2020Q1</a>
+        <a class="footer-git" href="https://github.com/ZakharovOwl">Zakharov.owl@github.com</a>
+      </div>
+    </div>
+  </footer>
+  </main>
+  <script src="./scr/script.js"></script>
+  <script src="./scr/swiper.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+
+</html>
